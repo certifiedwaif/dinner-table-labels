@@ -1,0 +1,38 @@
+%%%%
+%
+% ticket.sty example file for a pin for conferences
+%
+%%%%
+% use the corresponding paper size for your ticket definition
+\documentclass[a4paper,14pt]{extarticle}
+
+% load ticket.sty with the appropriate ticket definition
+\usepackage[freepin, boxed]{ticket}
+\usepackage{comicneue}
+
+% load misc stuff
+\usepackage{graphicx}
+\usepackage{extsizes}
+
+% make your default ticket. \ticketdefault is somewhat like a background
+\renewcommand{\ticketdefault}{%
+%   \put(50,  3){\includegraphics[width=15mm]{ifmlogoc}}
+%   \put(5, 13){\line(1,0){60}}
+%   \put(7, 10){\scriptsize Mark and Liza's wedding}
+%   \put(7,  7){\scriptsize Coffee Club}
+%   \put(7,  4){\scriptsize 12/12/2021}
+}
+
+% now what do you like to put in your ticket
+\newcommand{\confpin}[2]{\ticket{%
+    \put(35,80){\makebox[0mm]{\bfseries\Huge \textit{#1}}}
+    \put(35,70){\makebox[0mm]{\bfseries\Huge \textit{#2}}}
+}}
+
+
+%% the pins for the partipiciants ... ;-)
+%% you can generate this part from a database!
+\begin{document}
+\sffamily
+latex_lines
+\end{document}
